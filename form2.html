@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 60%;
+      /* height: fit-content; */
+      padding: 16px;
+      margin: 100px auto;
+
+      border: 4px solid;
+      border-radius: 24px;
+    }
+
+    .batas {
+      margin: 8px 0 15px 0;
+      outline: 1px solid;
+    }
+
+    .atas {
+      display: flex;
+      width: 100%;
+      /* height: fit-content; */
+
+      /* border: 2px solid; */
+    }
+
+    .atas .inp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 12px;
+
+      /* border: 1px solid; */
+    }
+
+    .atas .inp input {
+      outline: none;
+      border: 0;
+      border-bottom: 1px solid;
+    }
+
+    .atas .inp .inp1 {
+      padding-bottom: 12px;
+      margin-top: -15px;
+    }
+
+    .atas p {
+      display: inline-block;
+    }
+
+    .atas .img,img {
+      margin: auto;
+      /* border: 1px solid; */
+      border-radius: 12px;
+    }
+
+    .atas img {
+      display: block;
+
+      width: 80px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form>
+
+    <div class="container">
+
+      <!-- NOTE AWAL ATAS -->
+
+      <div class="atas">
+
+        <div class="inp">
+
+          <div class="inp1">
+            <p>Nama &nbsp;&nbsp;&nbsp;: </p>
+            <input
+              type="text"
+              name="nama"
+              id="inp"
+            >
+          </div>
+          <div class="inp2">
+            <p>No. telp : </p>
+            <input
+              type="tel"
+              name="telp"
+              id="inp"
+            >
+          </div>
+          <div class="img">
+            <img src="img/logo1.png">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      </head>
+      <!-- NOTE AKHIR ATAS -->
+
+      <div class="batas"></div>
+
+      <!-- NOTE AWAL TENGAH -->
+      <tengah>
+
+        Provinsi &nbsp;: <br>
+        <input
+          type="radio"
+          name="Provinsi"
+          value="jabar"
+        > Jawa Barat <br>
+        <input
+          type="radio"
+          name="Provinsi"
+          value="jatim"
+        > Jawa Timur <br>
+        <input
+          type="radio"
+          name="Provinsi"
+          value="jateng"
+        > Jawa Tengah
+        <br>
+        Kota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+        <select>
+          <option>Cirebon</option>
+          <option>Surabaya</option>
+          <option>Malang</option>
+          <option>Semarang</option>
+          <option>Bandung</option>
+        </select>
+        Usia
+        <input
+          type="checkbox"
+          name="15"
+        > 15 - 21 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+          type="checkbox"
+          name="22"
+        > 22 - 40
+
+      </tengah>
+      <!-- NOTE AKHIR TENGAH -->
+
+
+      <!-- NOTE AWAL BAWAH -->
+      <bawah>
+
+        <input
+          type="submit"
+          value="kirim"
+        >
+        <input
+          type="submit"
+          value="Batal"
+        >
+
+      </bawah>
+      <!-- NOTE AKHIR BAWAH -->
+
+    </div>
+
+
+  </form>
+</body>
+
+</html>
