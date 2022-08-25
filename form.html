@@ -5,21 +5,113 @@
   <title>Document</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     table {
+      width: 500px;
       margin: 24px auto;
     }
 
-    #td {
-      /* display: flex; */
-      flex-direction: column;
+    .tr1 th {
+      width: 80%;
+      height: 32px;
+    }
 
-      margin: 12px;
+    .tr1 td img {
+      width: 150px;
+      height: 150px;
 
+      padding: 8px;
     }
 
 
-    input:not(:last-child) {
-      margin-bottom: 8px;
+    .tr2 td div {
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+      margin-bottom: 12px;
+
+      /* border: 1px solid; */
+    }
+
+    .tr2 td div input {
+      border: 0;
+      border-bottom: 1px solid;
+      outline: none;
+
+    }
+
+    .tr3 th {
+      height: 32px;
+    }
+
+    .tr4 td .prov,
+    .kota {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .tr4 td {
+      padding: 12px;
+    }
+
+    .tr4 td .prov {
+      margin-bottom: 12px;
+    }
+
+    .tr4 td .prov p:not(:first-child) {
+      margin-top: -3px;
+      margin-left: 4px;
+    }
+
+    .tr5 {
+      height: 32px;
+    }
+
+    .tr6 td {
+      padding: 12px;
+    }
+
+    .tr6 td .usia {
+      display: flex;
+      gap: 8px;
+    }
+
+    .tr6 td .usia input {
+      width: 28px;
+      outline: none;
+      border: 0;
+      border-bottom: 1px solid;
+    }
+
+    .tr7 td {
+      padding: 12px;
+    }
+
+    .tr7 td .button {
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+    }
+
+    .tr7 td .button input {
+      width: 64px;
+      height: 32px;
+
+      font-size: 14px;
+
+      border: 0;
+      cursor: pointer;
+    }
+
+    .tr7 td .button input:hover {
+      font-weight: 600;
     }
   </style>
 
@@ -27,24 +119,16 @@
 
 <body>
   <form>
-    <table
-      border="1"
-      width="400"
-    >
+    <table border="1">
 
-    <!-- NOTE ROW 1 -->
+      <!-- NOTE ROW 1 -->
       <tr class="tr1">
 
-        <th
-          colspan="1"
-          width="300"
-          bgcolor="66d3db"
-        >Form Pendaftaran</th>
+        <th colspan="1">Form Pendaftaran</th>
         <td rowspan="2">
           <img
-            src="img/logo1.png"
-            height="150px"
-            width="150px"
+            src="img/logo2.png"
+            alt="logo"
           >
         </td>
 
@@ -53,16 +137,13 @@
       <!-- NOTE ROW 2 -->
       <tr class="tr2">
 
-        <td
-          colspan="1"
-          align="left"
-          id="td"
-        >
+        <td>
           <div>
             Nama &nbsp;&nbsp;: <input
               type="text"
               name="Nama"
               id="inp"
+              placeholder="Mohamad Faizal Agathon"
             ><br>
           </div>
           <div>
@@ -70,6 +151,7 @@
               type="text"
               name="Nama"
               id="inp"
+              placeholder="081914523696"
             ><br>
           </div>
 
@@ -79,10 +161,8 @@
       <tr class="tr3">
 
         <th
-          align="center"
           colspan="3"
           width="300"
-          bgcolor="66d3db"
         >Alamat</th>
 
       </tr>
@@ -90,75 +170,90 @@
       <!-- NOTE ROW 4 -->
       <tr class="tr4">
 
-        <td
-          colspan="3"
-          width="300"
-          id="td"
-        >
-          </th>
-          Provinsi &nbsp;: <br>
-          <input
-            type="radio"
-            name="Provinsi"
-            value="jabar"
-          > Jawa Barat <br>
-          <input
-            type="radio"
-            name="Provinsi"
-            value="jatim"
-          > Jawa Timur <br>
-          <input
-            type="radio"
-            name="Provinsi"
-            value="jateng"
-          > Jawa Tengah
-          <br>
-          Kota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
-          <select>
-            <option>Cirebon</option>
-            <option>Surabaya</option>
-            <option>Malang</option>
-            <option>Semarang</option>
-            <option>Bandung</option>
-          </select>
+        <td colspan="3">
+          <div class="prov">
+
+            <p>Provinsi &nbsp;:&nbsp;&nbsp;</p>
+            <input
+              type="radio"
+              name="Provinsi"
+              value="jabar"
+            >
+            <p>Jawa Barat&nbsp;&nbsp;</p>
+            <input
+              type="radio"
+              name="Provinsi"
+              value="jatim"
+            >
+            <p>Jawa Timur&nbsp;&nbsp;</p>
+            <input
+              type="radio"
+              name="Provinsi"
+              value="jateng"
+            >
+            <p>Jawa Tengah&nbsp;&nbsp;</p>
+
+          </div>
+
+          <div class="kota">
+
+            <p>Kota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</p>
+            <select>
+              <option>Cirebon</option>
+              <option>Surabaya</option>
+              <option>Malang</option>
+              <option>Semarang</option>
+              <option>Bandung</option>
+            </select>
+
+          </div>
+
         </td>
 
       </tr>
 
       <!-- NOTE ROW 5 -->
       <tr class="tr5">
-
-        <td
-          colspan="3"
-          id="td"
-        >
-          Usia
-          <input
-            type="checkbox"
-            name="15"
-          > 15 - 21 <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-            type="checkbox"
-            name="22"
-          > 22 - 40
-        </td>
-
+        <th colspan="2">Program</th>
       </tr>
 
       <!-- NOTE ROW 6 -->
       <tr class="tr6">
 
+        <td>
+          <p>Sabuk</p>
+          <input type="radio" name="" id="">
+        </td>
+        <td>
+          <div class="usia">
+
+            <p>Usia :</p>
+            <input
+              type="text"
+              name="usia"
+            >
+
+          </div>
+        </td>
+
+      </tr>
+
+      <!-- NOTE ROW 7 -->
+      <tr class="tr7">
+
         <td colspan="3">
-          <input
-            type="submit"
-            value="kirim"
-            value="kirim"
-          >
-          <input
-            type="submit"
-            value="Batal"
-            value="Batal"
-          >
+          <div class="button">
+
+            <input
+              type="submit"
+              value="Kirim"
+            >
+            <input
+              type="submit"
+              value="Batal"
+            >
+
+          </div>
         </td>
 
       </tr>
