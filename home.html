@@ -11,9 +11,14 @@
       box-sizing: border-box;
     }
 
+    html{
+      scroll-behavior: smooth;
+    }
+
     body {
       width: 100%;
-      height: 100vh;
+      height: fit-content;
+      background-color: #373435;
     }
 
     .container {
@@ -22,13 +27,19 @@
       margin: 40px auto;
       padding: 12px;
 
-      border: 4px solid;
+      border: 4px solid #fff112;
       border-radius: 24px;
       overflow: hidden;
     }
 
-    .container h2,
-    h3 {
+    .container img {
+      width: 100px;
+      height: 100px;
+      margin-right: 12px;
+      float: left;
+    }
+
+    .container h2 {
       width: 100%;
       height: 30px;
       margin-bottom: 12px;
@@ -37,21 +48,25 @@
       text-align: center;
       line-height: 30px;
 
-      color: #000;
-      /* background: #; */
+      border-bottom: 2px solid #fff112;
+      color: #fff;
     }
 
-    .container p,ul{
+    .container p,
+    ul {
       margin-bottom: 12px;
 
       font-weight: 100;
       font-family: 'Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
+      color: #fff;
     }
-    .container p span{
+
+    .container p span {
       font-size: 130%;
       font-weight: 600;
     }
-    .container ul{
+
+    .container ul {
       margin-left: 24px;
       list-style: decimal;
     }
@@ -64,6 +79,11 @@
   <div class="container">
 
     <h2>PENDAHULUAN</h2>
+
+    <img
+      src="img/logo2.png"
+      alt="logo"
+    >
 
     <p><span>PPS Betako (Perguruan Pencak Silat Beladiri Tangan Kosong),</span> Merpati Putih merupakan singkatan dari
       falsafah Jawa
