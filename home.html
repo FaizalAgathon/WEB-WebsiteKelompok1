@@ -11,7 +11,12 @@
       box-sizing: border-box;
     }
 
-    html{
+    ::selection {
+      background-color: #fff112;
+      color: #373435;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
@@ -19,6 +24,28 @@
       width: 100%;
       height: fit-content;
       background-color: #373435;
+    }
+
+    #myBtn {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #EC3237;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    #myBtn:hover {
+      background-color: #ff7c81;
     }
 
     .container {
@@ -70,11 +97,35 @@
       margin-left: 24px;
       list-style: decimal;
     }
+
+    .container .sabuk img {
+      width: 300px;
+      height: 300px;
+      float: right;
+    }
   </style>
+
+  <script>
+
+    mybutton = document.getElementById("myBtn");
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+  </script>
 
 </head>
 
 <body>
+
+  <button
+    onclick="topFunction()"
+    id="myBtn"
+    title="Ke atas"
+  >^</button>
+
 
   <div class="container">
 
@@ -195,6 +246,49 @@
       <li>Keserasian dan keselarasan dalam penampilan sehari-hari</li>
       <li>Menghayati dan mengamalkan sikap itu agar menimbulkan Ketaqwaan kepada Tuhan.</li>
     </ul>
+
+    <div class="sabuk">
+
+      <h2>SABUK</h2>
+
+      <img
+        src="img/sabuk.jfif"
+        alt="sabuk"
+      >
+
+      <ul>
+        <li>Tingkat Dasar I, tingkatan pertama masih berstatus calon anggota, walaupun telah berseragam baju atau kaos
+          berwarna putih, celana hitam, kerah baju merah dengan label nama diri di dada namun sabuk masih putih polos.
+        </li>
+        <li>Tingkat Dasar II, tingkatan kedua dan seterusnya telah memakai seragam anggota tanpa nama diri dengan
+          lambang
+          IPSI dan lambang Merpati Putih di dada serta bersabuk merah polos.
+        </li>
+        <li>Tingkat Balik I, sabuk merah (tanpa strip) dengan lambang Merpati Putih di salah satu ujungnya.</li>
+        <li>Tingkat Balik II, sabuk merah dengan lambang Merpati Putih dan berstrip merah di salah satu ujungnya.</li>
+        <li>Tingkat Kombinasi I, sabuk merah dengan lambang Merpati Putih dan berstrip jingga di salah satu ujungnya.
+        </li>
+        <li>Tingkat Kombinasi II, sabuk merah dengan lambang Merpati Putih dan berstrip kuning di salah satu ujungnya.
+        </li>
+        <li>Tingkat Khusus I (Khusus Tangan), sabuk merah dengan lambang Merpati Putih dan berstrip hijau di salah satu
+          ujungnya.
+        </li>
+        <li>Tingkat Khusus II (Khusus Kaki), sabuk merah dengan lambang Merpati Putih dan berstrip biru di salah satu
+          ujungnya.
+        </li>
+        <li>Tingkat Khusus III (Khusus Badan), sabuk merah dengan lambang Merpati Putih dan berstrip nila di salah satu
+          ujungnya.
+        </li>
+        <li>Tingkat Kesegaran, sabuk merah dengan lambang Merpati Putih dan berstrip ungu di salah satu ujungnya.
+        </li>
+        <li>Tingkat Inti I, sabuk merah dengan lambang Merpati Putih dan berstrip putih di salah satu ujungnya.
+        </li>
+        <li>Tingkat Inti II, sabuk merah dengan lambang Merpati Putih dan berstrip merah dan putih di salah satu
+          ujungnya.
+        </li>
+      </ul>
+
+    </div>
 
   </div>
 
